@@ -1,0 +1,14 @@
+from flask import Flask, request, jsonify
+import joblib
+
+app = Flask(name)
+model = joblib.load("iris_model.pkl")
+
+@app.route("/predict", methods=["POST"])
+def predict():
+data = request.get_json()
+prediction = model.predict([[data["sepal_length"], data["sepal_width"], data["petal_length"], data["petal_width"]]])
+return jsonify({"prediction": prediction.tolist()[0]})
+
+if name == "main":
+app.run(debug=True)
