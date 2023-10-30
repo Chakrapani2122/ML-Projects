@@ -1,2 +1,3 @@
-# OIBGRIP
-Oasis Infobyte Data Science Internship
+# Machine Learning Projects
+
+This repository contains machine Learning Projects on various datasets.
